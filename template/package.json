@@ -1,8 +1,8 @@
 {
-  "name": "quasar-app",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "A Quasar App",
-  "author": "Your Name",
+  "description": "{{description}}",
+  "author": "{{author}}",
   "scripts": {
     "clean": "node build/script.clean.js",
     "dev": "node build/script.dev.js",

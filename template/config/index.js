@@ -33,7 +33,7 @@ module.exports = {
     // auto open browser or not
     openBrowser: true,
     publicPath: '/',
-    port: 8080,
+    port: {{port}},
 
     // If for example you are using Quasar Play
     // to generate a QR code then on each dev (re)compilation
