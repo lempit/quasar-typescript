@@ -1,0 +1,33 @@
+{
+	
+		"compilerOptions": {
+			"module": "es2015",
+			"target": "es5",
+			"isolatedModules": false,
+			"moduleResolution": "node",
+			"noImplicitAny": true,
+			"noImplicitThis": true,
+			"noImplicitReturns": true,
+			"noUnusedLocals": true,
+			"strictNullChecks": true,
+			"sourceMap": false,
+			"experimentalDecorators": true,
+			"emitDecoratorMetadata": true,
+			"allowSyntheticDefaultImports": true,
+			"suppressImplicitAnyIndexErrors": true,
+			"stripInternal": true,
+			"allowJs":true,
+			"lib": [
+				"dom",
+				"es5",
+				"es2015",
+				"es2015.promise"
+			]
+		},
+
+		"exclude": [
+			"node_modules",
+			"dist"
+		]
+	
+	}

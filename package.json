@@ -1,0 +1,10 @@
+{
+  "name": "quasar-typescript",
+  "version": "0.0.1",
+  "description": "Quasar app built with Typescript powered by VueTyped.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Budi Adiono",
+  "license": "MIT"
+}
