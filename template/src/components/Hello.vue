@@ -14,7 +14,7 @@
 
       <q-toolbar-title>
         Quasar App
-        <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
+        <div slot="subtitle">Running on Quasar {{{{raw-helper}}}}v{{$q.version}}{{{{/raw-helper}}}}</div>
       </q-toolbar-title>
     </q-toolbar>
 
