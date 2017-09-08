@@ -1,3 +1,4 @@
+{{#if_eq lang "html"}}
 <template>
   <q-layout
     ref="layout"
@@ -58,6 +59,44 @@
     </div>
   </q-layout>
 </template>
+{{/if_eq}}
+{{#if_eq lang "pug"}}
+<template lang="pug">
+  q-layout(ref='layout', view='lHh Lpr fff', :left-class="{'bg-grey-2': true}")
+    q-toolbar.glossy(slot='header')
+      q-btn(flat='', @click='$refs.layout.toggleLeft()')
+        q-icon(name='menu')
+      q-toolbar-title
+        | Quasar App
+        div(slot='subtitle') Running on Quasar v{{$q.version}}
+    div(slot='left')
+      //-
+        Use <q-side-link> component
+        instead of <q-item> for
+        internal vue-router navigation
+      q-list(no-border='', link='', inset-delimiter='')
+        q-list-header Essential Links
+        q-item(@click="launch('http://quasar-framework.org')")
+          q-item-side(icon='school')
+            q-item-main(label='Docs', sublabel='quasar-framework.org')
+        q-item(@click="launch('http://forum.quasar-framework.org')")
+          q-item-side(icon='record_voice_over')
+            q-item-main(label='Forum', sublabel='forum.quasar-framework.org')
+        q-item(@click="launch('https://gitter.im/quasarframework/Lobby')")
+          q-item-side(icon='chat')
+            q-item-main(label='Gitter Channel', sublabel='Quasar Lobby')
+        q-item(@click="launch('https://twitter.com/quasarframework')")
+          q-item-side(icon='rss feed')
+            q-item-main(label='Twitter', sublabel='@quasarframework')
+    //-
+      Replace following <div> with
+      <router-view /> component
+      if using subRoutes
+    .layout-padding.logo-container.non-selectable.no-pointer-events
+      .logo(:style='position')
+        img(src='~assets/quasar-logo-full.svg')
+</template>
+{{/if_eq}}
 
 <script lang="ts">
   import Hello from './Hello'

@@ -1,6 +1,13 @@
+{{#if_eq lang "html"}}
 <template>
   <div></div>
 </template>
+{{/if_eq}}
+{{#if_eq lang "pug"}}
+<template lang="pug">
+  div
+</template>
+{{/if_eq}}
 
 <script lang="ts">
 import Vue from "vue"

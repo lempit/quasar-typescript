@@ -1,3 +1,4 @@
+{{#if_eq lang "html"}}
 <template>
   <!-- Configure "view" prop for QLayout -->
   <q-layout>
@@ -60,6 +61,53 @@
     -->
   </q-layout>
 </template>
+{{/if_eq}}
+{{#if_eq lang "pug"}}
+<template lang="pug">
+  //- Configure "view" prop for QLayout
+  q-layout
+    q-toolbar(slot='header')
+      //- opens drawer below
+        button.hide-on-drawer-visible(@click='$refs.drawer.open()')
+          i menu
+      q-toolbar-title
+        | Title
+
+    //- Navigation Tabs
+      q-tabs(slot='navigation')
+        q-route-tab(slot='title', icon='view_quilt', to='/layout/about', replace='', hide='icon', label='About')
+        q-route-tab(slot='title', icon='view_day', to='/layout/toolbar', replace='', hide='icon', label='Toolbar')
+        q-route-tab(slot='title', icon='view_day', to='/layout/tabs', replace='', label='Tabs')
+        q-route-tab(slot='title', icon='input', to='/layout/drawer', replace='', label='Drawer')
+
+    //- Left Side Panel
+      div(slot='left')
+        q-list(no-border='', link='', inset-delimiter='')
+          q-list-header Essential Links
+          q-item
+            q-item-side(icon='school')
+            q-item-main(label='Docs', sublabel='quasar-framework.org')
+          q-item
+            q-item-side(icon='record_voice_over')
+            q-item-main(label='Forum', sublabel='forum.quasar-framework.org')
+          q-item
+            q-item-side(icon='chat')
+            q-item-main(label='Gitter Channel', sublabel='Quasar Lobby')
+          q-item
+            q-item-side(icon='rss feed')
+            q-item-main(label='Twitter', sublabel='@quasarframework')
+
+    //- Right Side Panel
+      div(slot='right')
+        | ...
+
+    router-view
+
+    //- Footer
+      q-toolbar(slot='footer')
+        | ...
+</template>
+{{/if_eq}}
 
 <script lang="ts">
 import Vue from "vue"

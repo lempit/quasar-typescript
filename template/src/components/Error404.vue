@@ -1,3 +1,4 @@
+{{#if_eq lang "html"}}
 <template>
   <div class="error-page window-height window-width bg-light column items-center no-wrap">
     <div class="error-code bg-primary flex items-center justify-center">
@@ -30,6 +31,23 @@
     </div>
   </div>
 </template>
+{{/if_eq}}
+{{#if_eq lang "pug"}}
+<template lang="pug">
+  .error-page.window-height.window-width.bg-light.column.items-center.no-wrap
+    .error-code.bg-primary.flex.items-center.justify-center
+      | 404
+    div
+      .error-card.shadow-4.bg-white.column.items-center.justify-center.no-wrap
+        q-icon(name='error_outline', color='grey-5')
+        p.caption.text-center Oops. Nothing here...
+        p.text-center.group
+          q-btn(v-if='canGoBack', color='primary', push='', @click='goBack', icon='keyboard_arrow_left')
+            | Go back
+          q-btn(color='primary', push='', @click="$router.replace('/')", icon-right='home')
+            | Go home
+</template>
+{{/if_eq}}
 
 <script lang="ts">
   import Error404 from './Error404'

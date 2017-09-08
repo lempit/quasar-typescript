@@ -1,0 +1,32 @@
+{
+  "prompts": {
+    "name": {
+      "message": "Name of project",
+      "required": true
+		},
+		"description": {
+			"message": "Project description"
+		},
+		"port": {
+			"message": "Development port"
+		},
+		"author": {
+			"message": "Project author"
+		},
+    "lang": {			
+      "message": "Pick a Vue template language",
+      "choices": [
+        {
+          "name": "Html",
+          "value": "html",
+          "short": "html"
+        },
+        {
+          "name": "Pug",
+          "value": "pug",
+          "short": "pug"
+        }
+      ]
+    }
+  }
+}
