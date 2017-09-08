@@ -48,7 +48,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           postcss: cssUtils.postcss,
-          loaders: merge({js: 'babel-loader'}, cssUtils.styleLoaders({
+          loaders: merge({js: 'babel-loader', ts: 'ts-loader'}, cssUtils.styleLoaders({
             sourceMap: useCssSourceMap,
             extract: env.prod
           }))
