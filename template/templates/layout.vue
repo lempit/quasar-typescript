@@ -61,12 +61,22 @@
   </q-layout>
 </template>
 
-<script>
-export default {
-  data () {
-    return {}
-  }
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-typed"
+
+@Component()
+export default class Index extends Vue {
+	
 }
+
+/*
+// You may move code above into something like Foo.ts file and replace the code above with:
+
+import Foo from './Foo'
+export default Foo
+
+*/
 </script>
 
 <style>
